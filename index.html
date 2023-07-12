@@ -9,13 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <!-- bootstrap icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- --My Css-- -->
     <link rel="stylesheet" href="style.css" />
     <title>My Portfolio | Ichwan Dwi Nursid</title>
   </head>
   <!-- navbar -->
   <body id="home">
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #0e9e9e">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #0e9e9e" >
       <div class="container">
         <nav class="navbar bg-body-tertiary">
           <div class="container-fluid">
@@ -54,7 +56,7 @@
     <section class="jumbotron text-center">
       <img src="img/1 iwan(1).jpg" alt="pictures" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Ichwan Dwi Nursid</h1>
-      <p class="lead">Programmer | IT enthusiast</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,17 +70,17 @@
     <!-- --about-- -->
 
     <section id="about">
-      <div class="container">
+      <div class="container bottom">
         <div class="row text-center">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5">
-          <div class="col-md-4">hello friends, introduce my name is Ichwan Dwi Nursid, I am an enthusiast in the IT field, especially in web development,
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration ="1000">hello friends, introduce my name is Ichwan Dwi Nursid, I am an enthusiast in the IT field, especially in web development,
             even though I'm only a high school graduate, that hasn't dampened my interest in having a career in the IT world, with the rapid development of information, it feels like everyone can have a career in the world of programming, or IT, regardless of educational background, the most important thing is curiosity, want learn, and be consistent
           </div>
-          <div class="col-md-4">I come from a remote area in the south of the island of Java, namely Wonogiri district, I live simply, in my opinion it is a comfortable life, but like most problems in the village, here the internet network is very bad, so just to learn programming, I have to go to city, but fortunately now BTS towers have been built so that the internet connection is more stable, and I can work remotely more efficiently
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration ="1000" data-aos-delay = "200">I come from a remote area in the south of the island of Java, namely Wonogiri district, I live simply, in my opinion it is a comfortable life, but like most problems in the village, here the internet network is very bad, so just to learn programming, I have to go to city, but fortunately now BTS towers have been built so that the internet connection is more stable, and I can work remotely more efficiently
           </div>
         </div>
       </div>
@@ -95,11 +97,11 @@
     <!-- project -->
     <section id="project">
       <div class="container">
-        <div class="row text-center fs-5 mb-3 ">
+        <div class="row text-center fs-5 mb-3">
           <div class="col">My Project</div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-offset="500">
             <div class="card">
               <img src="img/portfolio_Ichwan_hut.png" class="card-img-top" alt="..." />
               <br>
@@ -112,8 +114,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <div class="col-md-4 mb-3" >
+            <div class="card" data-aos="flip-left" data-aos-offset="500" data-aos-duration ="500" data-aos-delay = "100">
               <img src="img/portfolio_Ichwan_Movies_DataBase.png" class="card-img-top" alt="..." />
               <br>
               <div class="card-body">
@@ -123,8 +125,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
+          <div class="col-md-4 mb-3" >
+            <div class="card" data-aos="flip-left" data-aos-offset="500" data-aos-duration ="500" data-aos-delay = "200">
               <img src="img/portfolio_NodeJS_crud.png" class="card-img-top" alt="..." />
               <div class="card-body">
                 <p class="card-text">this is my 3rd project , this is a CRUD operation , yes this is my 1st backend project , to be honest i think it is more difficult than the previous projects in development , but no give up !! , with strong determination and consistency in learning , I can finally master the backend , I also understand about databases , especially mysql
@@ -196,6 +198,27 @@
     <!-- akhir footer -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once : true,
+      });
+    </script>
+    <!-- gshock -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!--Text-Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      // register Plugin
+      gsap.registerPlugin(TextPlugin);
+      // --------------
+      gsap.to('.lead',{duration:2.5,delay:1.5,text:'Programmer | Freelancer | IT enthusiast'});
+      gsap.from('.jumbotron img',{ duration:1,rotateY:360, opacity:0});
+      gsap.from('.navbar',{duration:1.5,y:'-100%',opacity:0,ease:'bounce'});
+      gsap.from('.display-4',{duration:1,x:-50,opacity:0,delay:0.5,ease:'back'})
+    </script>
+    <!-- Javascript -->
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbwxIMKmgJu6mpZI1bNl-Y7KY_RoDpqUrAIWqTYOpDgkME08s7DNUjO_9lwT7sX78i8_/exec'
       const form = document.forms['submit-to-google-sheet']
